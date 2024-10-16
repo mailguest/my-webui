@@ -1,0 +1,40 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #e0f7fa;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #005bb5;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-content {
+      margin-bottom: 20px;
+    }
+  }
