@@ -29,7 +29,7 @@ function HeroSection() {
             rel="noopener noreferrer"
             className="cta-button"
           >
-            Get Started
+            Try OpenAPI proxy
           </a>
           <a
             href="https://github.com/mailguest/my-webui"
@@ -37,7 +37,7 @@ function HeroSection() {
             rel="noopener noreferrer"
             className="github-button"
           >
-            View on GitHub
+            View source on GitHub
           </a>
         </div>
       </div>
