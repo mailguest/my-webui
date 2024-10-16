@@ -1,28 +1,28 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #0070f3;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #0070f3;
+  color: white;
+}
+
+.nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
+
+  .nav {
+    margin-top: 10px;
   }
-  
-  .nav a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .nav {
-      margin-top: 10px;
-    }
-  }
+}

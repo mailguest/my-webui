@@ -1,40 +1,99 @@
 .hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #e0f7fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #e0f7fa;
+}
+
+.hero-content {
+  flex: 1;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.indicator-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #0070f3;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #005bb5;
+}
+
+.github-button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #24292e;
+  border: 2px solid #24292e;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.github-button:hover {
+  background-color: #e0e0e0;
+  color: #3a3f44;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   .hero-content {
-    max-width: 500px;
+    margin-bottom: 20px;
   }
-  
-  .cta-button {
-    padding: 10px 20px;
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .cta-button:hover {
-    background-color: #005bb5;
-  }
-  
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  @media (max-width: 768px) {
-    .hero-section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .hero-content {
-      margin-bottom: 20px;
-    }
-  }
+}
