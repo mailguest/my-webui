@@ -68,3 +68,6 @@ git push -u origin main
 ##### 持续集成和自动部署
 - 连接 GitHub 后，每次你推送到主分支（或其他配置的分支），Vercel 会自动重新构建和部署最新版本。
 - 你可以在 Vercel 的项目设置页面中管理自动部署的触发条件。
+
+最后在你心爱的项目README里面添加如下链接就行啦
+[![通过 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mailguest/my-webui)
