@@ -1,10 +1,16 @@
 .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 400px; /* 设置最大宽度 */
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-form h2 {
@@ -15,22 +21,46 @@
 .login-form input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
 }
 
 .login-form button {
   width: 100%;
   padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .login-form button:hover {
   background-color: #0056b3;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-form .error {
+  color: red; /* 错误信息的颜色 */
+}
+
+.login-form .message {
+  color: green; /* 成功信息的颜色 */
+}
+
+.login-form a {
+  color: #007bff; /* 链接的颜色 */
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
 }

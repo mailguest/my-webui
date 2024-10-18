@@ -1,16 +1,15 @@
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
+  margin: 0;
+  padding: 20px;
   width: 100%;
   background-color: #007bff;
   color: white;
   text-align: center;
-  padding: 10px;
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 20px;
-  }
+.footer p {
+  margin: 0;
 }

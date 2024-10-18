@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
+import ProtectedLink from './ProtectedLink'; // 引入 ProtectedLink 组件
 
 const images = [
   'https://via.placeholder.com/500',
@@ -35,12 +36,12 @@ function HeroSection() {
         <h1>Vercel 自动化部署测试项目</h1>
         <p>本项目旨在通过 Vercel 实现 CI/CD，测试直接部署的便捷性和稳定性。</p>
         <div className="button-group">
-          <button
+          <ProtectedLink
             onClick={handleTryOpenAPIProxy}
             className="cta-button"
           >
-            Try OpenAPI proxy
-          </button>
+            Try OpenAPI Proxy
+          </ProtectedLink>
           <a
             href="https://github.com/mailguest/my-webui"
             target="_blank"

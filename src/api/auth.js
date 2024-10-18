@@ -10,9 +10,13 @@ export const register = async (username, password) => {
       username: encryptedUsername,
       password: encryptedPassword,
     });
-    return response.data;
+    return response;
   } catch (error) {
-    throw error.response.data;
+    if (error.response && error.response.data) {
+      throw error.response.data;
+    } else {
+      throw new Error('注册失败');
+    }
   }
 };
 
@@ -26,6 +30,10 @@ export const login = async (username, password) => {
     });
     return response.data;
   } catch (error) {
-    throw error.response.data;
+    if (error.response && error.response.data) {
+      throw error.response.data;
+    } else {
+      throw new Error('登录失败');
+    }
   }
 };
