@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
 const images = [
@@ -9,6 +10,7 @@ const images = [
 
 function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,20 +19,28 @@ function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleTryOpenAPIProxy = (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    } else {
+      window.open('https://apis.biubiu123.online/', '_blank', 'noopener noreferrer');
+    }
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-content">
         <h1>Vercel 自动化部署测试项目</h1>
         <p>本项目旨在通过 Vercel 实现 CI/CD，测试直接部署的便捷性和稳定性。</p>
         <div className="button-group">
-          <a
-            href="https://apis.biubiu123.online/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={handleTryOpenAPIProxy}
             className="cta-button"
           >
             Try OpenAPI proxy
-          </a>
+          </button>
           <a
             href="https://github.com/mailguest/my-webui"
             target="_blank"
